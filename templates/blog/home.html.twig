@@ -1,11 +1,117 @@
 {% extends "base.html.twig" %}
 {% block body %}
 
-<h3>
-  Heading
-  <small class="text-body-secondary">with faded secondary text</small>
-</h3>
+    <style>
+        .hero {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 80px;
+        }
+        .hero img {
+            max-width: 300px;
+            border-radius: 15px;
+        }
+        .social-buttons a {
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+<div class="container text-center">
+    <div class="hero">
+        <div class="text-start">
+            <h1 class="display-4">Bonjour, je suis <strong>Gauthier</strong></h1>
+            <p class="lead">Etudiant en RT, bienvenue sur mon site !</p>
+            <div class="social-buttons mt-4">
+                <a href="https://github.com/tonprofil" class="btn btn-outline-dark" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/tonprofil" class="btn btn-outline-primary" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com/tonprofil" class="btn btn-outline-info" target="_blank">Twitter</a>
+            </div>
+        </div>
+        <img src="{{ asset('images/photo.jpg') }}" alt="Photo de moi">
+    </div>
+</div>
 
-<button type="button" class="btn btn-primary">Primary</button>
+<div class="row mt-5 text-center">
+    <h2 class="text-center mb-4">🛠️ Mes compétences</h2>
+    <div class="col-md-3">
+        <div class="card border-primary shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">📘 JavaScript</h5>
+                <p class="card-text">Apprentissage progressif avec des projets concrets.</p>
+                <span class="badge bg-warning text-dark">Frontend</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-success shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">🧩 Node.js</h5>
+                <p class="card-text">Création d'API et gestion du backend moderne.</p>
+                <span class="badge bg-success">Backend</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-info shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">🔧 Git & GitHub</h5>
+                <p class="card-text">Versioning et collaboration sur des projets open source.</p>
+                <span class="badge bg-dark">Outils</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-dark shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">🎓 RT</h5>
+                <p class="card-text">Formation Réseaux & Télécoms, compétences techniques solides.</p>
+                <span class="badge bg-secondary">Études</span>
+            </div>
+        </div>
+    </div>
+</div>
 
+
+<div class="row mt-5 text-center">
+    <h2 class="text-center mb-4">🛠️ Mes projets</h2>
+    <div class="col-md-3">
+        <div class="card border-primary shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">📘 JavaScript</h5>
+                <p class="card-text">Apprentissage progressif avec des projets concrets.</p>
+                <span class="badge bg-warning text-dark">Frontend</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-success shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">🧩 Node.js</h5>
+                <p class="card-text">Création d'API et gestion du backend moderne.</p>
+                <span class="badge bg-success">Backend</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-info shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">🔧 Git & GitHub</h5>
+                <p class="card-text">Versioning et collaboration sur des projets open source.</p>
+                <span class="badge bg-dark">Outils</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card border-dark shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title">🎓 RT</h5>
+                <p class="card-text">Formation Réseaux & Télécoms, compétences techniques solides.</p>
+                <span class="badge bg-secondary">Études</span>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

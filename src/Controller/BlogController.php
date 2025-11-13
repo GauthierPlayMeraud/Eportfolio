@@ -23,11 +23,4 @@ final class BlogController extends AbstractController
         ]);
     }
 
-    #[Route('/blog/page1', name: 'app_blog_page1')]
-    public function page1(): Response
-    {
-        return $this->render('blog/page1.html.twig', [
-            'controller_name' => 'BlogController',
-        ]);
-    }
 }
