@@ -17,15 +17,13 @@ final class BlogController extends AbstractController
     }
 
     #[Route('/blog/home', name: 'app_home')]
-    Public function home() : response
+    public function home(): Response
     {
-       return $this->render('blog/home.html.twig',[
-                'title' => "Bienvenue a L'IUT",
-                'age' => 31
-    ]);
+        return $this->render('blog/home.html.twig', [
+        ]);
     }
 
-    #[Route('/blog/page1.html.twig', name: 'app_blog')]
+    #[Route('/blog/page1', name: 'app_blog_page1')]
     public function page1(): Response
     {
         return $this->render('blog/page1.html.twig', [
