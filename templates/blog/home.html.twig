@@ -2,6 +2,9 @@
 {% block body %}
 
     <style>
+    html {
+  scroll-behavior: smooth;
+}
         .hero {
             display: flex;
             flex-wrap: wrap;
@@ -16,10 +19,48 @@
         .social-buttons a {
             margin: 5px;
         }
+
+        /* Espacement entre les sections */
+        .section-spacing {
+          margin-top: 200px;   /* espace au-dessus */
+          margin-bottom: 200px; /* espace en dessous */
+        }
+
+        /* Style du titre des sections */
+        .section-title {
+          font-size: 2rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-bottom: 40px;
+          position: relative;
+        }
+
+        /* Traits décoratifs autour du titre */
+        .section-title::before,
+        .section-title::after {
+          content: "";
+          display: inline-block;
+          width: 60px;
+          height: 2px;
+          background-color: #007bff; /* couleur bleue Bootstrap */
+          margin: 0 15px;
+          vertical-align: middle;
+        }
+
+        /* Effet hover sur les cartes */
+        .card {
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        
     </style>
 </head>
 <body>
-<div class="container text-center">
+<div class="container text-center" id="acceuil">
     <div class="hero">
         <div class="text-start">
             <h1 class="display-4">Bonjour, je suis <strong>Gauthier</strong></h1>
@@ -34,8 +75,58 @@
     </div>
 </div>
 
-<div class="row mt-5 text-center">
-    <h2 class="text-center mb-4">🛠️ Mes compétences</h2>
+<!-- Section Skills -->
+<section class="py-5 text-center section-spacing" id="competences">
+  <div class="container">
+    <h2 class="section-title">Compétences</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <div class="border rounded p-3">
+          <h5>Design</h5>
+          <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
+            <span class="btn btn-outline-primary btn-sm">🎨 Figma</span>
+            <span class="btn btn-outline-primary btn-sm">🎨 Tailwind</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="border rounded p-3">
+          <h5>Front-end</h5>
+          <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
+            <span class="btn btn-outline-success btn-sm">💻 TypeScript</span>
+            <span class="btn btn-outline-success btn-sm">💻 Three.js</span>
+            <span class="btn btn-outline-success btn-sm">💻 React</span>
+            <span class="btn btn-outline-success btn-sm">💻 SvelteUI</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="border rounded p-3">
+          <h5>Back-end</h5>
+          <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
+            <span class="btn btn-outline-danger btn-sm">🛠 Rails</span>
+            <span class="btn btn-outline-danger btn-sm">🛠 Fastify</span>
+            <span class="btn btn-outline-danger btn-sm">🛠 CSharp</span>
+            <span class="btn btn-outline-danger btn-sm">🛠 PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="border rounded p-3">
+          <h5>Other</h5>
+          <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
+            <span class="btn btn-outline-dark btn-sm">🔧 Git & GitHub</span>
+            <span class="btn btn-outline-dark btn-sm">🔧 Vercel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Projets -->
+<div class="row text-center section-spacing" id="projets">
+    <h2 class="section-title">🛠️ Mes projets</h2>
     <div class="col-md-3">
         <div class="card border-primary shadow-sm">
             <div class="card-body">
@@ -74,44 +165,33 @@
     </div>
 </div>
 
+<!-- Section Contact -->
+<section class="py-5 section-spacing" id="contacts">
+  <div class="container">
+    <h2 class="text-center mb-4 section-title">📞 Contact</h2>
+    <div class="row justify-content-center">
+      <!-- Bloc Téléphone -->
+      <div class="col-md-4">
+        <div class="card border-primary shadow-sm text-center">
+          <div class="card-body">
+            <h5 class="card-title">Téléphone</h5>
+            <p class="card-text fs-5">📱 +33 6 12 34 56 78</p>
+            <a href="tel:+33612345678" class="btn btn-outline-primary btn-sm">Appeler</a>
+          </div>
+        </div>
+      </div>
+      <!-- Bloc Email -->
+      <div class="col-md-4">
+        <div class="card border-success shadow-sm text-center">
+          <div class="card-body">
+            <h5 class="card-title">Email</h5>
+            <p class="card-text fs-5">✉️ gauthier@example.com</p>
+            <a href="mailto:gauthier@example.com" class="btn btn-outline-success btn-sm">Envoyer un mail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div class="row mt-5 text-center">
-    <h2 class="text-center mb-4">🛠️ Mes projets</h2>
-    <div class="col-md-3">
-        <div class="card border-primary shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">📘 JavaScript</h5>
-                <p class="card-text">Apprentissage progressif avec des projets concrets.</p>
-                <span class="badge bg-warning text-dark">Frontend</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card border-success shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">🧩 Node.js</h5>
-                <p class="card-text">Création d'API et gestion du backend moderne.</p>
-                <span class="badge bg-success">Backend</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card border-info shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">🔧 Git & GitHub</h5>
-                <p class="card-text">Versioning et collaboration sur des projets open source.</p>
-                <span class="badge bg-dark">Outils</span>
-            </div>
-        </div>
-    </div>
-    <div class="col-md-3">
-        <div class="card border-dark shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">🎓 RT</h5>
-                <p class="card-text">Formation Réseaux & Télécoms, compétences techniques solides.</p>
-                <span class="badge bg-secondary">Études</span>
-            </div>
-        </div>
-    </div>
-</div>
 {% endblock %}
