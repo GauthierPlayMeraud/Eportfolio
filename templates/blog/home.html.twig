@@ -57,19 +57,36 @@
           box-shadow: 0 6px 20px rgba(0,0,0,0.15);
         }
         
+        .card-img-top {
+          height: 200px;       
+          object-fit: cover;  
+        }
+
     </style>
 </head>
-<body>
+
 <div class="container text-center" id="acceuil">
     <div class="hero">
         <div class="text-start">
             <h1 class="display-4">Bonjour, je suis <strong>Gauthier</strong></h1>
             <p class="lead">Etudiant en RT, bienvenue sur mon site !</p>
             <div class="social-buttons mt-4">
-                <a href="https://github.com/tonprofil" class="btn btn-outline-dark" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/tonprofil" class="btn btn-outline-primary" target="_blank">LinkedIn</a>
-                <a href="https://twitter.com/tonprofil" class="btn btn-outline-info" target="_blank">Twitter</a>
-                <a href="{{ asset('documents/CV.pdf') }}" class="btn btn-outline-warning" target="_blank">📄 CV</a>
+                <a href="https://github.com/tonprofil" class="btn btn-outline-dark" target="_blank">
+                    <img src="{{ asset('images/github.png') }}" alt="GitHub" style="height:20px; margin-right:5px;">
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/tonprofil" class="btn btn-outline-primary" target="_blank">
+                    <img src="{{ asset('images/LNKD.png') }}" alt="LinkedIn" style="height:20px; margin-right:5px;">
+                    LinkedIn
+                </a>
+                <a href="https://twitter.com/tonprofil" class="btn btn-outline-info" target="_blank">
+                    <img src="{{ asset('images/X2.png') }}" alt="X" style="height:20px; margin-right:5px;">
+                    X
+                </a>
+                <a href="{{ asset('documents/CV.pdf') }}" class="btn btn-outline-warning" target="_blank">
+                    <img src="{{ asset('images/CV.png') }}" alt="CV" style="height:20px; margin-right:5px;">
+                    CV
+                </a>
             </div>
         </div>
         <img src="{{ asset('images/photo.jpg') }}" alt="Photo de moi">
@@ -77,8 +94,9 @@
 </div>
 
 
-<!-- Bloc avec sous-parties -->
-<section class="py-5 section-spacing" id="sous-parties">
+
+
+<section class="py-5 section-spacing" id="competences">
   <div class="container">
     <h2 class="section-title text-center">⚙️ Mes Compétences</h2>
 
@@ -93,6 +111,15 @@
         <div id="collapseConnecter" class="accordion-collapse collapse show" aria-labelledby="headingConnecter" data-bs-parent="#accordionBloc">
           <div class="accordion-body">
             <p>Gestion des réseaux, configuration et mise en relation des systèmes.</p>
+            <!-- Sous-parties -->
+            <ul class="list-group mt-3">
+              <li class="list-group-item">AC12.01 Mesurer et analyser les signaux</li>
+              <li class="list-group-item">AC12.02 Caractériser des systèmes de transmissions élémentaires et découvrir la modélisation mathématique de leur fonctionnement </li>
+              <li class="list-group-item">AC12.03 Déployer des supports de transmission</li>
+              <li class="list-group-item">AC12.04 Connecter les systèmes de ToIP </li>
+              <li class="list-group-item">AC12.05 Communiquer avec un tiers (client, collaborateur...) et adapter son discours et sa langue à son interlocuteur</li>
+
+            </ul>
           </div>
         </div>
       </div>
@@ -107,6 +134,15 @@
         <div id="collapseProgrammer" class="accordion-collapse collapse" aria-labelledby="headingProgrammer" data-bs-parent="#accordionBloc">
           <div class="accordion-body">
             <p>Développement d’applications, scripts et automatisation des tâches.</p>
+            <!-- Sous-parties -->
+            <ul class="list-group mt-3">
+              <li class="list-group-item">AC13.01 Utiliser un système informatique et ses outils</li>
+              <li class="list-group-item">AC13.02 Lire, exécuter, corriger et modifier un programme</li>
+              <li class="list-group-item">AC13.03 Traduire un algorithme, dans un langage et pour un environnement donné</li>
+              <li class="list-group-item">AC13.04 Connaître l’architecture et les technologies d’un site Web</li>
+              <li class="list-group-item">AC13.05 Choisir les mécanismes de gestion de données adaptés au développement de l’outil et argumenter ses choix </li>
+              <li class="list-group-item">AC13.06 S’intégrer dans un environnement propice au développement et au travail collaboratif</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -121,6 +157,15 @@
         <div id="collapseAdministrer" class="accordion-collapse collapse" aria-labelledby="headingAdministrer" data-bs-parent="#accordionBloc">
           <div class="accordion-body">
             <p>Administration des systèmes, sécurité et maintenance des infrastructures.</p>
+            <!-- Sous-parties -->
+            <ul class="list-group mt-3">
+              <li class="list-group-item">AC11.01 Maîtriser les lois fondamentales de l’électricité afin d’intervenir sur des équipements de réseaux et télécommunications</li>
+              <li class="list-group-item">AC11.02 Comprendre l’architecture et les fondements des systèmes numériques, les principes du codage de l’information, des communications et de l’Internet</li>
+              <li class="list-group-item">AC11.03 Configurer les fonctions de base du réseau local</li>
+              <li class="list-group-item">AC11.04 Maîtriser les rôles et les principes fondamentaux des systèmes d’exploitation afin d’interagir avec ceux-ci pour la configuration et l’administration des réseaux et services fournis</li>
+              <li class="list-group-item">AC11.05 Savoir identifier les dysfonctionnements du réseau local</li>
+              <li class="list-group-item">AC11.06 Installer un poste client, expliquer la procédure mise en place</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -140,7 +185,8 @@
   </div>
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap"></script>
+
 
 
 
@@ -152,40 +198,48 @@
       <!-- Sport -->
       <div class="col-md-3">
         <div class="card border-primary shadow-sm">
-          <img src="{{ asset('images/Jeff-Seid.jpg') }}" class="card-img-top" alt="Sport">
+          <a href="https://www.youtube.com/watch?v=-xUJmgXYHzc" target="_blank">
+          <img src="{{ asset('images/jeffseid.jpg') }}" class="card-img-top" alt="Sport">
+            </a>
           <div class="card-body">
             <h5 class="card-title">🏀 Sport</h5>
-            <p class="card-text">Basket, football et activités physiques pour garder la forme.</p>
+            <p class="card-text">Je pratique la musculation en salle, pour garder une bonne hygiéne de vie et un beau physique.</p>
           </div>
         </div>
       </div>
       <!-- Musique -->
       <div class="col-md-3">
         <div class="card border-success shadow-sm">
+           <a href="https://www.youtube.com/watch?v=FGBhQbmPwH8&list=RDFGBhQbmPwH8&start_radio=1" target="_blank">
           <img src="{{ asset('images/dj.jpg') }}" class="card-img-top" alt="Musique">
+           </a>
           <div class="card-body">
             <h5 class="card-title">🎵 Musique</h5>
-            <p class="card-text">Écouter et jouer de la guitare, piano et autres instruments.</p>
+            <p class="card-text">J'écoute beaucoup de musique et mix sur un controlleur DJ</p>
           </div>
         </div>
       </div>
       <!-- Voyage -->
       <div class="col-md-3">
         <div class="card border-info shadow-sm">
-          <img src="{{ asset('images/voyage.jpg') }}" class="card-img-top" alt="Voyage">
+           <a href="https://www.chess.com" target="_blank">
+          <img src="{{ asset('images/echec.jpg') }}" class="card-img-top" alt="Voyage">
+           </a>
           <div class="card-body">
-            <h5 class="card-title">✈️ Voyage</h5>
-            <p class="card-text">Découvrir de nouvelles cultures et paysages à travers le monde.</p>
+            <h5 class="card-title">♟️Échec</h5>
+            <p class="card-text">J'adore jouer au échec et en apprendre le plus possible.</p>
           </div>
         </div>
       </div>
       <!-- Lecture -->
       <div class="col-md-3">
         <div class="card border-warning shadow-sm">
-          <img src="{{ asset('images/platon.jpg') }}" class="card-img-top" alt="Lecture">
+        <a href="https://www.amazon.fr/Apologie-Socrate-Platon-ebook/dp/B06XR5V16L/ref=sr_1_9?adgrpid=1352400238462660&dib=eyJ2IjoiMSJ9.XP-lV3LPwasjNrEZ_HdpgMFxDsYb8KVNbDsm3pXpnz0VO7qgqAJLhkUVCz3CRKi-BIH5Vte1LVjUU-38HTVO-aQI17VXEBoLKhSW7FnPDFo5CmjPew6ZQ823OIwIrKhYBdMcdS3IpAteCOWbtlP_g4WkRNpwRwBHxUbpexZJBAe779G5GuUU6ihijGjaJmHDXVic69PMEHLABTy8uTiSP_FgZVfhGxc0WDrl0NmhDI61xX5zDFrx0W9Jg3PKvx28xFnpe5VOVsxbN04ok-VfPcfFaQ7hQCi2lVswRwzNMcA.9vcfYGR0iKGRlmu3xsSoe6IPvXB5gNu4BiHTSolKTcM&dib_tag=se&hvadid=84525273606487&hvbmt=be&hvdev=c&hvlocphy=126807&hvnetw=o&hvqmt=e&hvtargid=kwd-84525538499681%3Aloc-66&hydadcr=10212_1854185&keywords=apologie+de+socrate+de+platon&mcid=ee03c6433b08334880ed527e2cdaa235&msclkid=98396731706f109018960e1f839a1107&qid=1764684791&sr=8-9" target="_blank">
+        <img src="{{ asset('images/socrate.jpg') }}" class="card-img-top" alt="Lecture">
+          </a>
           <div class="card-body">
             <h5 class="card-title">📚 Lecture</h5>
-            <p class="card-text">Romans, science-fiction et ouvrages techniques pour apprendre et se divertir.</p>
+            <p class="card-text">Je lis différent genre de livre allant du roman aux livres philosophique.</p>
           </div>
         </div>
       </div>
@@ -200,8 +254,8 @@
     <div class="col-md-3">
         <div class="card border-primary shadow-sm">
             <div class="card-body">
-                <h5 class="card-title">📘 JavaScript</h5>
-                <p class="card-text">Apprentissage progressif avec des projets concrets.</p>
+                <h5 class="card-title">📘 SAE 1.01</h5>
+                <p class="card-text">Se sensibiliser à l’hygiène informatique et à la cybersécurité</p>
                 <span class="badge bg-warning text-dark">Frontend</span>
             </div>
         </div>
@@ -209,8 +263,8 @@
     <div class="col-md-3">
         <div class="card border-success shadow-sm">
             <div class="card-body">
-                <h5 class="card-title">🧩 Node.js</h5>
-                <p class="card-text">Création d'API et gestion du backend moderne.</p>
+                <h5 class="card-title">🧩 SAE 1.02</h5>
+                <p class="card-text">Administrer les réseaux et l’Internet</p>
                 <span class="badge bg-success">Backend</span>
             </div>
         </div>
@@ -218,8 +272,8 @@
     <div class="col-md-3">
         <div class="card border-info shadow-sm">
             <div class="card-body">
-                <h5 class="card-title">🔧 Git & GitHub</h5>
-                <p class="card-text">Versioning et collaboration sur des projets open source.</p>
+                <h5 class="card-title">🔧 SAE 1.03</h5>
+                <p class="card-text">Découvrir un support de transmission</p>
                 <span class="badge bg-dark">Outils</span>
             </div>
         </div>
@@ -227,12 +281,13 @@
     <div class="col-md-3">
         <div class="card border-dark shadow-sm">
             <div class="card-body">
-                <h5 class="card-title">🎓 RT</h5>
-                <p class="card-text">Formation Réseaux & Télécoms, compétences techniques solides.</p>
+                <h5 class="card-title">🎓 SAE 1.04</h5>
+                <p class="card-text">Créer des outils et applications informatiques pour les R&T</p>
                 <span class="badge bg-secondary">Études</span>
             </div>
         </div>
     </div>
+    
 </div>
 
 <!-- Section Contact -->
