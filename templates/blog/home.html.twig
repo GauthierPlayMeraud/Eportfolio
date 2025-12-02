@@ -69,60 +69,130 @@
                 <a href="https://github.com/tonprofil" class="btn btn-outline-dark" target="_blank">GitHub</a>
                 <a href="https://linkedin.com/in/tonprofil" class="btn btn-outline-primary" target="_blank">LinkedIn</a>
                 <a href="https://twitter.com/tonprofil" class="btn btn-outline-info" target="_blank">Twitter</a>
+                <a href="{{ asset('documents/CV.pdf') }}" class="btn btn-outline-warning" target="_blank">📄 CV</a>
             </div>
         </div>
         <img src="{{ asset('images/photo.jpg') }}" alt="Photo de moi">
     </div>
 </div>
 
-<!-- Section Skills -->
-<section class="py-5 text-center section-spacing" id="competences">
+
+<!-- Bloc avec sous-parties -->
+<section class="py-5 section-spacing" id="sous-parties">
   <div class="container">
-    <h2 class="section-title">Compétences</h2>
+    <h2 class="section-title text-center">⚙️ Mes Compétences</h2>
+
+    <div class="accordion" id="accordionBloc">
+      <!-- Connecter -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingConnecter">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConnecter" aria-expanded="true" aria-controls="collapseConnecter">
+            🔌 Connecter
+          </button>
+        </h2>
+        <div id="collapseConnecter" class="accordion-collapse collapse show" aria-labelledby="headingConnecter" data-bs-parent="#accordionBloc">
+          <div class="accordion-body">
+            <p>Gestion des réseaux, configuration et mise en relation des systèmes.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Programmer -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingProgrammer">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProgrammer" aria-expanded="false" aria-controls="collapseProgrammer">
+            💻 Programmer
+          </button>
+        </h2>
+        <div id="collapseProgrammer" class="accordion-collapse collapse" aria-labelledby="headingProgrammer" data-bs-parent="#accordionBloc">
+          <div class="accordion-body">
+            <p>Développement d’applications, scripts et automatisation des tâches.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Administrer -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingAdministrer">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdministrer" aria-expanded="false" aria-controls="collapseAdministrer">
+            🛠 Administrer
+          </button>
+        </h2>
+        <div id="collapseAdministrer" class="accordion-collapse collapse" aria-labelledby="headingAdministrer" data-bs-parent="#accordionBloc">
+          <div class="accordion-body">
+            <p>Administration des systèmes, sécurité et maintenance des infrastructures.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Soft Skills en boutons -->
+    <div class="mt-5 text-center">
+      <h3 class="mb-4">🌟 Mes Soft Skills</h3>
+      <div class="d-flex flex-wrap gap-2 justify-content-center">
+        <span class="btn btn-outline-primary btn-sm">💡 Esprit critique</span>
+        <span class="btn btn-outline-success btn-sm">🎨 Créativité</span>
+        <span class="btn btn-outline-info btn-sm">🤝 Travail en équipe</span>
+        <span class="btn btn-outline-warning btn-sm">🧘 Gestion du stress</span>
+        <span class="btn btn-outline-danger btn-sm">🗣 Communication</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+<!-- Section Loisirs -->
+<section class="py-5 text-center section-spacing" id="loisirs">
+  <div class="container">
+    <h2 class="section-title">🎉 Loisirs</h2>
     <div class="row">
+      <!-- Sport -->
       <div class="col-md-3">
-        <div class="border rounded p-3">
-          <h5>Design</h5>
-          <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
-            <span class="btn btn-outline-primary btn-sm">🎨 Figma</span>
-            <span class="btn btn-outline-primary btn-sm">🎨 Tailwind</span>
+        <div class="card border-primary shadow-sm">
+          <img src="{{ asset('images/Jeff-Seid.jpg') }}" class="card-img-top" alt="Sport">
+          <div class="card-body">
+            <h5 class="card-title">🏀 Sport</h5>
+            <p class="card-text">Basket, football et activités physiques pour garder la forme.</p>
           </div>
         </div>
       </div>
+      <!-- Musique -->
       <div class="col-md-3">
-        <div class="border rounded p-3">
-          <h5>Front-end</h5>
-          <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
-            <span class="btn btn-outline-success btn-sm">💻 TypeScript</span>
-            <span class="btn btn-outline-success btn-sm">💻 Three.js</span>
-            <span class="btn btn-outline-success btn-sm">💻 React</span>
-            <span class="btn btn-outline-success btn-sm">💻 SvelteUI</span>
+        <div class="card border-success shadow-sm">
+          <img src="{{ asset('images/dj.jpg') }}" class="card-img-top" alt="Musique">
+          <div class="card-body">
+            <h5 class="card-title">🎵 Musique</h5>
+            <p class="card-text">Écouter et jouer de la guitare, piano et autres instruments.</p>
           </div>
         </div>
       </div>
+      <!-- Voyage -->
       <div class="col-md-3">
-        <div class="border rounded p-3">
-          <h5>Back-end</h5>
-          <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
-            <span class="btn btn-outline-danger btn-sm">🛠 Rails</span>
-            <span class="btn btn-outline-danger btn-sm">🛠 Fastify</span>
-            <span class="btn btn-outline-danger btn-sm">🛠 CSharp</span>
-            <span class="btn btn-outline-danger btn-sm">🛠 PostgreSQL</span>
+        <div class="card border-info shadow-sm">
+          <img src="{{ asset('images/voyage.jpg') }}" class="card-img-top" alt="Voyage">
+          <div class="card-body">
+            <h5 class="card-title">✈️ Voyage</h5>
+            <p class="card-text">Découvrir de nouvelles cultures et paysages à travers le monde.</p>
           </div>
         </div>
       </div>
+      <!-- Lecture -->
       <div class="col-md-3">
-        <div class="border rounded p-3">
-          <h5>Other</h5>
-          <div class="d-flex flex-wrap gap-2 justify-content-center mt-3">
-            <span class="btn btn-outline-dark btn-sm">🔧 Git & GitHub</span>
-            <span class="btn btn-outline-dark btn-sm">🔧 Vercel</span>
+        <div class="card border-warning shadow-sm">
+          <img src="{{ asset('images/platon.jpg') }}" class="card-img-top" alt="Lecture">
+          <div class="card-body">
+            <h5 class="card-title">📚 Lecture</h5>
+            <p class="card-text">Romans, science-fiction et ouvrages techniques pour apprendre et se divertir.</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- Section Projets -->
 <div class="row text-center section-spacing" id="projets">
