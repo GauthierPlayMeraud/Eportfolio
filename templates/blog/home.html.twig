@@ -15,6 +15,13 @@
         .hero img {
             max-width: 300px;
             border-radius: 15px;
+            
+        }
+        .hero .profile-pic {
+          width: 250px;
+          height: 250px;
+          border-radius: 50%;
+          object-fit: cover;
         }
         .social-buttons a {
             margin: 5px;
@@ -62,6 +69,7 @@
           object-fit: cover;  
         }
 
+
     </style>
 </head>
 
@@ -83,13 +91,13 @@
                     <img src="{{ asset('images/X2.png') }}" alt="X" style="height:20px; margin-right:5px;">
                     X
                 </a>
-                <a href="{{ asset('documents/CV.pdf') }}" class="btn btn-outline-warning" target="_blank">
+                <a href="{{ asset('cv.pdf') }}" class="btn btn-outline-warning" target="_blank">
                     <img src="{{ asset('images/CV.png') }}" alt="CV" style="height:20px; margin-right:5px;">
                     CV
                 </a>
             </div>
         </div>
-        <img src="{{ asset('images/photo.jpg') }}" alt="Photo de moi">
+        <img src="{{ asset('images/photo.jpg') }}" alt="Photo de moi" class="profile-pic">
     </div>
 </div>
 
@@ -202,7 +210,7 @@
           <img src="{{ asset('images/jeffseid.jpg') }}" class="card-img-top" alt="Sport">
             </a>
           <div class="card-body">
-            <h5 class="card-title">🏀 Sport</h5>
+            <h5 class="card-title">🏋🏻 Sport</h5>
             <p class="card-text">Je pratique la musculation en salle, pour garder une bonne hygiéne de vie et un beau physique.</p>
           </div>
         </div>
@@ -234,7 +242,7 @@
       <!-- Lecture -->
       <div class="col-md-3">
         <div class="card border-warning shadow-sm">
-        <a href="https://www.amazon.fr/Apologie-Socrate-Platon-ebook/dp/B06XR5V16L/ref=sr_1_9?adgrpid=1352400238462660&dib=eyJ2IjoiMSJ9.XP-lV3LPwasjNrEZ_HdpgMFxDsYb8KVNbDsm3pXpnz0VO7qgqAJLhkUVCz3CRKi-BIH5Vte1LVjUU-38HTVO-aQI17VXEBoLKhSW7FnPDFo5CmjPew6ZQ823OIwIrKhYBdMcdS3IpAteCOWbtlP_g4WkRNpwRwBHxUbpexZJBAe779G5GuUU6ihijGjaJmHDXVic69PMEHLABTy8uTiSP_FgZVfhGxc0WDrl0NmhDI61xX5zDFrx0W9Jg3PKvx28xFnpe5VOVsxbN04ok-VfPcfFaQ7hQCi2lVswRwzNMcA.9vcfYGR0iKGRlmu3xsSoe6IPvXB5gNu4BiHTSolKTcM&dib_tag=se&hvadid=84525273606487&hvbmt=be&hvdev=c&hvlocphy=126807&hvnetw=o&hvqmt=e&hvtargid=kwd-84525538499681%3Aloc-66&hydadcr=10212_1854185&keywords=apologie+de+socrate+de+platon&mcid=ee03c6433b08334880ed527e2cdaa235&msclkid=98396731706f109018960e1f839a1107&qid=1764684791&sr=8-9" target="_blank">
+        <a href="https://www.youtube.com/watch?v=UvOPy_iay0w" target="_blank">
         <img src="{{ asset('images/socrate.jpg') }}" class="card-img-top" alt="Lecture">
           </a>
           <div class="card-body">
@@ -251,44 +259,57 @@
 <!-- Section Projets -->
 <div class="row text-center section-spacing" id="projets">
     <h2 class="section-title">🛠️ Mes projets</h2>
+    
+    <!-- SAE 1.01 -->
     <div class="col-md-3">
         <div class="card border-primary shadow-sm">
             <div class="card-body">
                 <h5 class="card-title">📘 SAE 1.01</h5>
                 <p class="card-text">Se sensibiliser à l’hygiène informatique et à la cybersécurité</p>
-                <span class="badge bg-warning text-dark">Frontend</span>
+
+                <a href="{{ path('app_sae101') }}" class="btn btn-primary" target="_blank">Voir le projet</a>
             </div>
         </div>
     </div>
+
+    <!-- SAE 1.02 -->
     <div class="col-md-3">
         <div class="card border-success shadow-sm">
             <div class="card-body">
                 <h5 class="card-title">🧩 SAE 1.02</h5>
+                
                 <p class="card-text">Administrer les réseaux et l’Internet</p>
-                <span class="badge bg-success">Backend</span>
+               
+                <a href="{{ path('app_sae102') }}" class="btn btn-success" target="_blank">Voir le projet</a>
             </div>
         </div>
     </div>
+
+    <!-- SAE 1.03 -->
     <div class="col-md-3">
         <div class="card border-info shadow-sm">
             <div class="card-body">
                 <h5 class="card-title">🔧 SAE 1.03</h5>
                 <p class="card-text">Découvrir un support de transmission</p>
-                <span class="badge bg-dark">Outils</span>
+                
+                <a href="{{ path('app_sae103') }}" class="btn btn-info" target="_blank">Voir le projet</a>
             </div>
         </div>
     </div>
+
+    <!-- SAE 1.04 -->
     <div class="col-md-3">
         <div class="card border-dark shadow-sm">
             <div class="card-body">
                 <h5 class="card-title">🎓 SAE 1.04</h5>
                 <p class="card-text">Créer des outils et applications informatiques pour les R&T</p>
-                <span class="badge bg-secondary">Études</span>
+                
+                <a href="{{ path('app_sae104') }}" class="btn btn-dark" target="_blank">Voir le projet</a>
             </div>
         </div>
     </div>
-    
 </div>
+
 
 <!-- Section Contact -->
 <section class="py-5 section-spacing" id="contacts">
