@@ -1,1 +1,60 @@
 {% extends "base.html.twig" %}
+
+{% block title %}SAE 1.02 - Administration des réseaux et documentation{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">🌐 SAE 1.02 : Administration des réseaux et documentation</h1>
+
+    <div class="alert alert-info">
+        <strong>Durée :</strong> 24 heures<br>
+        <strong>Objectif :</strong> Concevoir, simuler et documenter un réseau local évolutif à partir d’une infrastructure existante.
+    </div>
+
+    <h3>📚 Étapes du projet</h3>
+    <ol>
+        <li><strong>Étude du réseau existant :</strong> Analyse des trames sniffées, exploration du protocole CDP, récupération des configurations via TFTP.</li>
+        <li><strong>Installation d’un serveur TFTP :</strong> Création d’un tutoriel d’installation de tftpd32/tftpd64 utilisable par tous.</li>
+        <li><strong>Conception et simulation :</strong> Création de 3 nouveaux LAN sur Packet Tracer :
+            <ul>
+                <li>LAN Production : 10 postes</li>
+                <li>LAN Commerciaux : 5 postes</li>
+                <li>LAN RH : 4 postes</li>
+            </ul>
+            Respect des contraintes VLAN (VLAN 150 réservé à l’administration).</li>
+        <li><strong>Réalisation et test :</strong> Mise en œuvre physique du réseau en salle TP avec tests sur Ubuntu.</li>
+        <li><strong>Document de synthèse :</strong> Rédaction d’un rapport complet justifiant la compatibilité du réseau existant avec les nouveaux LAN.</li>
+        <li><strong>Soutenance orale :</strong> Présentation de 7 minutes + 5 minutes de questions avec support diaporama.</li>
+    </ol>
+
+    <h3 class="mt-4">🧠 Compétences évaluées</h3>
+    <ul>
+        <li><strong>AC0111 :</strong> Maîtriser les lois fondamentales de l’électricité pour intervenir sur les équipements réseaux</li>
+        <li><strong>AC0112 :</strong> Comprendre l’architecture des systèmes numériques et le codage de l’information</li>
+        <li><strong>AC0113 :</strong> Configurer les fonctions de base du réseau local</li>
+        <li><strong>AC0114 :</strong> Interagir avec les systèmes d’exploitation pour configurer et administrer les réseaux</li>
+        <li><strong>AC0115 :</strong> Identifier les dysfonctionnements du réseau local</li>
+        <li><strong>AC0116 :</strong> Installer un poste client</li>
+    </ul>
+
+    <h3 class="mt-4">📌 Cahier des charges</h3>
+    <ul>
+        <li>Documentation complète du réseau (topologie, IP, VLAN, erreurs, configurations)</li>
+        <li>Utilisation d’un nouveau serveur TFTP pour stocker les configurations</li>
+        <li>Accès sécurisé à distance via SSH pour tous les équipements</li>
+        <li>Justification de chaque choix technique et configuration</li>
+    </ul>
+
+    <h3 class="mt-4">🎯 Conseils pour réussir</h3>
+    <ul>
+        <li>Analysez en profondeur les trames et les configurations existantes</li>
+        <li>Documentez chaque étape avec des captures et explications claires</li>
+        <li>Testez votre réseau simulé avant la mise en œuvre physique</li>
+        <li>Préparez votre diaporama dès le début pour la soutenance</li>
+    </ul>
+
+    <div class="text-center mt-5">
+        <a href="{{ path('app_home') }}" class="btn btn-primary">Retour au Portfolio</a>
+    </div>
+</div>
+{% endblock %}

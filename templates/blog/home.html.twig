@@ -74,110 +74,138 @@
 </head>
 
 <div class="container text-center" id="acceuil">
-    <div class="hero">
-        <div class="text-start">
-            <h1 class="display-4">Bonjour, je suis <strong>Gauthier</strong></h1>
-            <p class="lead">Etudiant en RT, bienvenue sur mon site !</p>
-            <div class="social-buttons mt-4">
-                <a href="https://github.com/tonprofil" class="btn btn-outline-dark" target="_blank">
-                    <img src="{{ asset('images/github.png') }}" alt="GitHub" style="height:20px; margin-right:5px;">
-                    GitHub
-                </a>
-                <a href="https://linkedin.com/in/tonprofil" class="btn btn-outline-primary" target="_blank">
-                    <img src="{{ asset('images/LNKD.png') }}" alt="LinkedIn" style="height:20px; margin-right:5px;">
-                    LinkedIn
-                </a>
-                <a href="https://twitter.com/tonprofil" class="btn btn-outline-info" target="_blank">
-                    <img src="{{ asset('images/X2.png') }}" alt="X" style="height:20px; margin-right:5px;">
-                    X
-                </a>
-                <a href="{{ asset('cv.pdf') }}" class="btn btn-outline-warning" target="_blank">
-                    <img src="{{ asset('images/CV.png') }}" alt="CV" style="height:20px; margin-right:5px;">
-                    CV
-                </a>
-            </div>
-        </div>
-        <img src="{{ asset('images/photo.jpg') }}" alt="Photo de moi" class="profile-pic">
+  <div class="hero">
+    <div class="text-start">
+      <h1 class="display-4">Bonjour, je suis <strong>Gauthier</strong></h1>
+      <p class="lead">Étudiant en BUT Réseaux & Télécoms, passionné par les réseaux, la cybersécurité et le développement.</p>
+      <p class="mb-3">
+        Actuellement en 1<sup>re</sup> année, je recherche un stage / une alternance pour mettre en pratique mes compétences techniques et humaines.
+      </p>
+      <div class="social-buttons mt-3">
+        <a href="https://github.com/tonprofil" class="btn btn-outline-dark" target="_blank">
+          <img src="{{ asset('images/github.png') }}" alt="GitHub" style="height:20px; margin-right:5px;">
+          GitHub
+        </a>
+        <a href="https://linkedin.com/in/tonprofil" class="btn btn-outline-primary" target="_blank">
+          <img src="{{ asset('images/LNKD.png') }}" alt="LinkedIn" style="height:20px; margin-right:5px;">
+          LinkedIn
+        </a>
+        <a href="https://twitter.com/tonprofil" class="btn btn-outline-info" target="_blank">
+          <img src="{{ asset('images/X2.png') }}" alt="X" style="height:20px; margin-right:5px;">
+          X
+        </a>
+        <a href="{{ asset('cv.pdf') }}" class="btn btn-outline-warning" target="_blank">
+          <img src="{{ asset('images/CV.png') }}" alt="CV" style="height:20px; margin-right:5px;">
+          CV
+        </a>
+        <a href="#contacts" class="btn btn-primary">
+          Me contacter
+        </a>
+      </div>
     </div>
+    <img src="{{ asset('images/photo.jpg') }}" alt="Photo de moi" class="profile-pic">
+  </div>
 </div>
+
+
+
+<!-- Section À propos -->
+<section class="py-5 section-spacing" id="apropos">
+  <div class="container">
+    <h2 class="section-title text-center">👤 À propos de moi</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-start">
+        <p>
+          Je suis étudiant en BUT Réseaux & Télécommunications, intéressé par l’administration des réseaux,
+          la cybersécurité et la création d’outils pour faciliter le travail des équipes techniques.
+        </p>
+        <p>
+          J’aime comprendre en profondeur le fonctionnement des systèmes, automatiser les tâches répétitives
+          avec des scripts et travailler en équipe sur des projets concrets.
+        </p>
+        <p>
+          Mon objectif à court terme est de développer mes compétences en Python, Linux et sécurité réseau,
+          tout en gagnant de l’expérience professionnelle en entreprise.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 
 
 <section class="py-5 section-spacing" id="competences">
-  <div class="container">
-    <h2 class="section-title text-center">⚙️ Mes Compétences</h2>
+  <div class="container text-center">
+    <h2 class="section-title">⚙️ Mes compétences</h2>
+    <p class="mb-4">Compétences issues du BUT Réseaux & Télécoms et technologies que j’utilise le plus souvent.</p>
 
-    <div class="accordion" id="accordionBloc">
-      <!-- Connecter -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingConnecter">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseConnecter" aria-expanded="true" aria-controls="collapseConnecter">
-            🔌 Connecter
-          </button>
-        </h2>
-        <div id="collapseConnecter" class="accordion-collapse collapse show" aria-labelledby="headingConnecter" data-bs-parent="#accordionBloc">
-          <div class="accordion-body">
-            <p>Gestion des réseaux, configuration et mise en relation des systèmes.</p>
-            <!-- Sous-parties -->
-            <ul class="list-group mt-3">
-              <li class="list-group-item">AC12.01 Mesurer et analyser les signaux</li>
-              <li class="list-group-item">AC12.02 Caractériser des systèmes de transmissions élémentaires et découvrir la modélisation mathématique de leur fonctionnement </li>
-              <li class="list-group-item">AC12.03 Déployer des supports de transmission</li>
-              <li class="list-group-item">AC12.04 Connecter les systèmes de ToIP </li>
-              <li class="list-group-item">AC12.05 Communiquer avec un tiers (client, collaborateur...) et adapter son discours et sa langue à son interlocuteur</li>
-
-            </ul>
-          </div>
-        </div>
+    {# Bloc AC (programme officiel) #}
+    <div class="row mb-5">
+      <div class="col-md-4 text-start">
+        <h4 class="mb-3">🔌 Connecter</h4>
+        <ul class="list-group">
+          <li class="list-group-item">AC12.01 Mesurer et analyser les signaux</li>
+          <li class="list-group-item">AC12.02 Caractériser des systèmes de transmissions élémentaires</li>
+          <li class="list-group-item">AC12.03 Déployer des supports de transmission</li>
+          <li class="list-group-item">AC12.04 Connecter les systèmes de ToIP</li>
+          <li class="list-group-item">AC12.05 Communiquer avec un tiers et adapter son discours</li>
+        </ul>
       </div>
 
-      <!-- Programmer -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingProgrammer">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseProgrammer" aria-expanded="false" aria-controls="collapseProgrammer">
-            💻 Programmer
-          </button>
-        </h2>
-        <div id="collapseProgrammer" class="accordion-collapse collapse" aria-labelledby="headingProgrammer" data-bs-parent="#accordionBloc">
-          <div class="accordion-body">
-            <p>Développement d’applications, scripts et automatisation des tâches.</p>
-            <!-- Sous-parties -->
-            <ul class="list-group mt-3">
-              <li class="list-group-item">AC13.01 Utiliser un système informatique et ses outils</li>
-              <li class="list-group-item">AC13.02 Lire, exécuter, corriger et modifier un programme</li>
-              <li class="list-group-item">AC13.03 Traduire un algorithme, dans un langage et pour un environnement donné</li>
-              <li class="list-group-item">AC13.04 Connaître l’architecture et les technologies d’un site Web</li>
-              <li class="list-group-item">AC13.05 Choisir les mécanismes de gestion de données adaptés au développement de l’outil et argumenter ses choix </li>
-              <li class="list-group-item">AC13.06 S’intégrer dans un environnement propice au développement et au travail collaboratif</li>
-            </ul>
-          </div>
-        </div>
+      <div class="col-md-4 text-start">
+        <h4 class="mb-3">💻 Programmer</h4>
+        <ul class="list-group">
+          <li class="list-group-item">AC13.01 Utiliser un système informatique et ses outils</li>
+          <li class="list-group-item">AC13.02 Lire, exécuter, corriger et modifier un programme</li>
+          <li class="list-group-item">AC13.03 Traduire un algorithme dans un langage donné</li>
+          <li class="list-group-item">AC13.04 Connaître l’architecture et les technologies d’un site Web</li>
+          <li class="list-group-item">AC13.05 Choisir les mécanismes de gestion de données adaptés</li>
+          <li class="list-group-item">AC13.06 Travailler dans un environnement de développement collaboratif</li>
+        </ul>
       </div>
 
-      <!-- Administrer -->
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="headingAdministrer">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAdministrer" aria-expanded="false" aria-controls="collapseAdministrer">
-            🛠 Administrer
-          </button>
-        </h2>
-        <div id="collapseAdministrer" class="accordion-collapse collapse" aria-labelledby="headingAdministrer" data-bs-parent="#accordionBloc">
-          <div class="accordion-body">
-            <p>Administration des systèmes, sécurité et maintenance des infrastructures.</p>
-            <!-- Sous-parties -->
-            <ul class="list-group mt-3">
-              <li class="list-group-item">AC11.01 Maîtriser les lois fondamentales de l’électricité afin d’intervenir sur des équipements de réseaux et télécommunications</li>
-              <li class="list-group-item">AC11.02 Comprendre l’architecture et les fondements des systèmes numériques, les principes du codage de l’information, des communications et de l’Internet</li>
-              <li class="list-group-item">AC11.03 Configurer les fonctions de base du réseau local</li>
-              <li class="list-group-item">AC11.04 Maîtriser les rôles et les principes fondamentaux des systèmes d’exploitation afin d’interagir avec ceux-ci pour la configuration et l’administration des réseaux et services fournis</li>
-              <li class="list-group-item">AC11.05 Savoir identifier les dysfonctionnements du réseau local</li>
-              <li class="list-group-item">AC11.06 Installer un poste client, expliquer la procédure mise en place</li>
-            </ul>
-          </div>
-        </div>
+      <div class="col-md-4 text-start">
+        <h4 class="mb-3">🛠 Administrer</h4>
+        <ul class="list-group">
+          <li class="list-group-item">AC11.01 Lois fondamentales de l’électricité</li>
+          <li class="list-group-item">AC11.02 Architecture des systèmes numériques et de l’Internet</li>
+          <li class="list-group-item">AC11.03 Configuration d’un réseau local</li>
+          <li class="list-group-item">AC11.04 Rôles des systèmes d’exploitation</li>
+          <li class="list-group-item">AC11.05 Diagnostic des dysfonctionnements réseau</li>
+          <li class="list-group-item">AC11.06 Installation et documentation d’un poste client</li>
+        </ul>
       </div>
     </div>
+
+    {# Bloc compétences techniques (badges) #}
+    <h3 class="mb-3">🧪 Compétences techniques</h3>
+    <p class="mb-4">Technologies et outils manipulés dans les SAÉ (réseaux, développement et traitement de données).</p>
+
+    <div class="mb-3">
+      <span class="badge text-bg-primary rounded-pill m-1">Linux</span>
+      <span class="badge text-bg-primary rounded-pill m-1">Windows / Windows Server</span>
+      <span class="badge text-bg-primary rounded-pill m-1">Cisco / Packet Tracer</span>
+      <span class="badge text-bg-primary rounded-pill m-1">Wireshark</span>
+      <span class="badge text-bg-primary rounded-pill m-1">tcpdump</span>
+    </div>
+    <div class="mb-3">
+      <span class="badge text-bg-success rounded-pill m-1">Python</span>
+      <span class="badge text-bg-success rounded-pill m-1">Bash</span>
+      <span class="badge text-bg-success rounded-pill m-1">HTML / CSS</span>
+      <span class="badge text-bg-success rounded-pill m-1">Bootstrap</span>
+      <span class="badge text-bg-success rounded-pill m-1">Symfony</span>
+    </div>
+    <div class="mb-3">
+      <span class="badge text-bg-info rounded-pill m-1">Git / GitHub</span>
+      <span class="badge text-bg-info rounded-pill m-1">Virtualisation</span>
+      <span class="badge text-bg-info rounded-pill m-1">Markdown</span>
+      <span class="badge text-bg-info rounded-pill m-1">Excel / traitement de données</span>
+    </div>
+  </div>
+</section>
+
 
     <!-- Soft Skills en boutons -->
     <div class="mt-5 text-center">
@@ -257,58 +285,69 @@
 
 
 <!-- Section Projets -->
-<div class="row text-center section-spacing" id="projets">
+<section class="section-spacing" id="projets">
+  <div class="container text-center">
     <h2 class="section-title">🛠️ Mes projets</h2>
-    
-    <!-- SAE 1.01 -->
-    <div class="col-md-3">
+
+    <!-- Ligne 1 : SAE 1.01 à 1.04 -->
+    <div class="row justify-content-center">
+      <div class="col-md-3 mb-4">
         <div class="card border-primary shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">📘 SAE 1.01</h5>
-                <p class="card-text">Se sensibiliser à l’hygiène informatique et à la cybersécurité</p>
-
-                <a href="{{ path('app_sae101') }}" class="btn btn-primary" target="_blank">Voir le projet</a>
-            </div>
+          <div class="card-body">
+            <h5 class="card-title">📘 SAE 1.01</h5>
+            <p class="card-text">Hygiène informatique, bonnes pratiques de sécurité et sensibilisation aux risques.</p>
+            <a href="{{ path('app_sae101') }}" class="btn btn-primary" target="_blank">Voir le projet</a>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- SAE 1.02 -->
-    <div class="col-md-3">
+      <div class="col-md-3 mb-4">
         <div class="card border-success shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">🧩 SAE 1.02</h5>
-                
-                <p class="card-text">Administrer les réseaux et l’Internet</p>
-               
-                <a href="{{ path('app_sae102') }}" class="btn btn-success" target="_blank">Voir le projet</a>
-            </div>
+          <div class="card-body">
+            <h5 class="card-title">🧩 SAE 1.02</h5>
+            <p class="card-text">Configuration de réseaux locaux, services de base et dépannage.</p>
+            <a href="{{ path('app_sae102') }}" class="btn btn-success" target="_blank">Voir le projet</a>
+          </div>
         </div>
-    </div>
+      </div>
 
-    <!-- SAE 1.03 -->
-    <div class="col-md-3">
+      <div class="col-md-3 mb-4">
         <div class="card border-info shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">🔧 SAE 1.03</h5>
-                <p class="card-text">Découvrir un support de transmission</p>
-                
-                <a href="{{ path('app_sae103') }}" class="btn btn-info" target="_blank">Voir le projet</a>
-            </div>
+          <div class="card-body">
+            <h5 class="card-title">🔧 SAE 1.03</h5>
+            <p class="card-text">Étude de la couverture WiFi, câblage et communication avec le client.</p>
+            <a href="{{ path('app_sae103') }}" class="btn btn-info" target="_blank">Voir le projet</a>
+          </div>
         </div>
+      </div>
+
+      <div class="col-md-3 mb-4">
+        <div class="card border-dark shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">🎓 SAE 1.04</h5>
+            <p class="card-text">Création de ce portfolio : site Web de présentation en Symfony / Bootstrap.</p>
+            <a href="{{ path('app_sae104') }}" class="btn btn-dark" target="_blank">Voir le projet</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- SAE 1.04 -->
-    <div class="col-md-3">
-        <div class="card border-dark shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">🎓 SAE 1.04</h5>
-                <p class="card-text">Créer des outils et applications informatiques pour les R&T</p>
-                
-                <a href="{{ path('app_sae104') }}" class="btn btn-dark" target="_blank">Voir le projet</a>
-            </div>
+    <!-- Ligne 2 : SAE 1.05 centrée -->
+    <div class="row justify-content-center">
+      <div class="col-md-3">
+        <div class="card border-info shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">📈 SAE 1.05</h5>
+            <p class="card-text">Traitement de données réseau (tcpdump) avec Python, CSV et Excel.</p>
+            <a href="{{ path('app_sae105') }}" class="btn btn-info" target="_blank">Voir le projet</a>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+
+  </div>
+</section>
+
 
 
 <!-- Section Contact -->
@@ -316,7 +355,6 @@
   <div class="container">
     <h2 class="text-center mb-4 section-title">📞 Contact</h2>
     <div class="row justify-content-center">
-      <!-- Bloc Téléphone -->
       <div class="col-md-4">
         <div class="card border-primary shadow-sm text-center">
           <div class="card-body">
@@ -326,7 +364,6 @@
           </div>
         </div>
       </div>
-      <!-- Bloc Email -->
       <div class="col-md-4">
         <div class="card border-success shadow-sm text-center">
           <div class="card-body">
@@ -339,5 +376,4 @@
     </div>
   </div>
 </section>
-
 {% endblock %}

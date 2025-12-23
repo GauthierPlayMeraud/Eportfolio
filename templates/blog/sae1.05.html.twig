@@ -1,1 +1,94 @@
 {% extends "base.html.twig" %}
+
+{% block title %}SAE 1.05 - Traiter des données{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">📊 SAE 1.05 : Traiter des données</h1>
+
+    <div class="alert alert-info">
+        <strong>Contexte :</strong> Analyse d’un fichier issu de la commande tcpdump pour identifier des activités suspectes entre le site d’administration en France et le site de production en Inde.<br>
+        <strong>Objectif :</strong> Concevoir des outils de traitement de données (Python, Excel) permettant d’extraire, d’analyser et de présenter les informations pertinentes pour le diagnostic réseau.
+    </div>
+
+    <h3>📚 Description de la SAÉ</h3>
+    <ul>
+        <li>Réalisation d’un premier TP Python (TP1) pour apprendre à lire un fichier textuel, extraire des données et produire un fichier csv.</li>
+        <li>Réalisation des activités du dossier Excel pour se familiariser avec le traitement de données et les représentations graphiques.</li>
+        <li>Mise en œuvre d’un traitement complet d’un fichier tcpdump afin d’identifier les deux activités suspectes sur le réseau.</li>
+    </ul>
+
+    <h3 class="mt-4">🧠 Apprentissages critiques mobilisés</h3>
+    <ul>
+        <li><strong>AC0311 :</strong> Utiliser un système informatique et ses outils (Windows/Linux, Python/Spyder, éditeur de code, Excel, GitHub, GitHub Desktop).</li>
+        <li><strong>AC0312 :</strong> Lire, exécuter, corriger et modifier un programme (scripts Python de traitement de données).</li>
+        <li><strong>AC0313 :</strong> Traduire un algorithme en programme pour un environnement donné (conception d’algorithmes de parsing et de filtrage des trames tcpdump).</li>
+        <li><strong>AC0314 :</strong> Connaître l’architecture et les technologies d’un site Web (génération d’une page de résultats au format Markdown / HTML simple).</li>
+        <li><strong>AC0315 :</strong> Choisir les mécanismes de gestion de données adaptés (csv, filtres, agrégations, graphiques dans Excel).</li>
+        <li><strong>AC0316 :</strong> S’intégrer dans un environnement collaboratif (hébergement du code sur GitHub et partage avec l’équipe France/Inde).</li>
+    </ul>
+
+    <h3 class="mt-4">📌 Cahier des charges</h3>
+    <ul>
+        <li>Avoir réalisé le TP1 Python et toutes les activités du dossier Excel fournis par l’enseignant.</li>
+        <li>Réaliser un traitement complet d’un fichier textuel (export tcpdump) pour mettre en évidence les problèmes réseau.</li>
+        <li>Créer un ou deux programmes Python automatisant le traitement :
+            <ul>
+                <li>Extraction des informations utiles et génération d’une page Web (Markdown) présentant les résultats.</li>
+                <li>Génération d’un fichier csv exploitable par un tableur.</li>
+            </ul>
+        </li>
+        <li>Exploiter le fichier csv dans Excel pour produire des tableaux et graphiques pertinents.</li>
+        <li>Rédiger une notice d’utilisation en anglais expliquant :
+            <ul>
+                <li>Comment utiliser le ou les scripts Python.</li>
+                <li>Comment utiliser le fichier Excel pour trouver le problème sur un nouveau fichier.</li>
+            </ul>
+        </li>
+        <li>Publier le projet sur GitHub pour permettre à l’équipe en Inde d’utiliser l’outil en suivant la notice.</li>
+    </ul>
+
+    <h3 class="mt-4">🗂️ Critères d’évaluation (RT3)</h3>
+
+    <strong>AC0311 – Utiliser un système informatique et ses outils (/4)</strong>
+    <ul>
+        <li><strong>Les logiciels :</strong> Capacité à utiliser en autonomie l’ensemble des logiciels mis à disposition (Windows/Linux, terminal, gcc, éditeur, Python/Spyder, Excel, GitHub / GitHub Desktop, etc.).</li>
+    </ul>
+
+    <strong>AC0312 – Lire, exécuter, corriger et modifier un programme (/4)</strong>
+    <ul>
+        <li><strong>Lire et exécuter un programme :</strong> Capacité à lire, commenter, expliquer et exécuter un script Python de traitement de données, avec un niveau d’autonomie croissant (1/4 à 4/4).</li>
+    </ul>
+
+    <strong>AC0313 – Traduire un algorithme dans un langage donné (/4)</strong>
+    <ul>
+        <li><strong>Algorithmes :</strong> Capacité à transformer un algorithme de traitement (filtrage, comptage, agrégation des trames tcpdump) en programme Python fonctionnel et réutilisable.</li>
+    </ul>
+
+    <strong>AC0314 – Connaître l’architecture et les technologies d’un site Web (/4)</strong>
+    <ul>
+        <li><strong>Notions de base HTML / Markdown :</strong> Capacité à générer une page de résultats en Markdown/HTML présentant les statistiques et graphiques issus des traitements Python.</li>
+    </ul>
+
+    <strong>AC0315 – Choisir les mécanismes de gestion de données adaptés (/4)</strong>
+    <ul>
+        <li><strong>Traiter les données :</strong> Capacité à isoler, organiser et représenter les informations pertinentes (tableaux, graphiques Excel) pour expliquer les anomalies détectées.</li>
+    </ul>
+
+    <strong>AC0316 – S’intégrer dans un environnement collaboratif (/4)</strong>
+    <ul>
+        <li><strong>GitHub et ses outils :</strong> Utilisation de Git / GitHub pour versionner le code, collaborer, et mettre à disposition le projet aux équipes France et Inde.</li>
+    </ul>
+
+    <h3 class="mt-4">📝 Modalités d’évaluation</h3>
+    <ul>
+        <li>Présentation orale de 12 minutes avec démonstration commentée du traitement de données réalisé en Python et sous Excel.</li>
+        <li>Démonstration de la capacité à traiter en direct un nouveau fichier fourni le jour de l’oral.</li>
+        <li>Remise sur Moodle d’une notice d’utilisation en anglais pour le programme Python et le fichier Excel.</li>
+    </ul>
+
+    <div class="text-center mt-5">
+        <a href="{{ path('app_home') }}" class="btn btn-primary">Retour au Portfolio</a>
+    </div>
+</div>
+{% endblock %}

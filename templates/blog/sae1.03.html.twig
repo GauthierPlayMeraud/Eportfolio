@@ -1,1 +1,76 @@
 {% extends "base.html.twig" %}
+
+{% block title %}SAE 1.03 - Connecter : WiFi, câblage et communication{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">🔌 SAE 1.03 : Connecter - WiFi, câblage et communication</h1>
+
+    <div class="alert alert-info">
+        <strong>Durée :</strong> 24 heures<br>
+        <strong>Objectif :</strong> Mesurer, déployer et justifier des solutions de connectivité réseau dans un contexte professionnel.
+    </div>
+
+    <h3>📚 Projets réalisés</h3>
+    <ol>
+        <li><strong>Projet 1 :</strong> Établissement de la couverture WiFi
+            <ul>
+                <li>Mesures sur le réseau eduroam : AP, Signal Strength, Signal Level, Noise Level, SNR, Channels</li>
+                <li>Plans zonés par couleur (du vert au rouge)</li>
+                <li>Courbes de couverture WiFi et choix d’un indicateur fiable</li>
+                <li>Présentation en anglais du travail réalisé</li>
+            </ul>
+        </li>
+        <li><strong>Projet 2 :</strong> Devis pour la salle réseaux G007
+            <ul>
+                <li>Choix du matériel passif dans le catalogue LEGRAND</li>
+                <li>Justification technique : baie de brassage, panneaux, noyaux, goulottes, câbles, prises RJ45</li>
+                <li>Présentation en anglais du devis et comparaison des offres</li>
+            </ul>
+        </li>
+        <li><strong>Projet 3 :</strong> Recettage du câblage de la salle G007
+            <ul>
+                <li>Tests de conformité entre répartiteurs B et C et les tables de travail</li>
+                <li>Vérification de la continuité et mesures techniques : longueur, type, débit</li>
+                <li>Plan de câblage avec numéros de prises</li>
+                <li>Présentation en anglais de la démarche de recettage</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h3 class="mt-4">🧠 Compétences évaluées</h3>
+    <ul>
+        <li><strong>AC0211 :</strong> Mesurer et analyser les signaux</li>
+        <li><strong>AC0213 :</strong> Déployer des supports de transmission</li>
+        <li><strong>AC0215 :</strong> Communiquer avec un client ou un collaborateur</li>
+    </ul>
+
+    <h3 class="mt-4">📌 Cahier des charges</h3>
+    <ul>
+        <li>Justification complète de toutes les mesures et choix techniques</li>
+        <li>Documentation claire et structurée avec tableaux et schémas</li>
+        <li>Communication professionnelle en anglais sur chaque projet</li>
+        <li>Intégration des pièces justificatives dans le portfolio</li>
+    </ul>
+
+    <h3 class="mt-4">🗂️ Critères de notation</h3>
+    <strong>Rapport (/10)</strong>
+    <ul>
+        <li>Présentation, mise en forme (sommaire, remerciements, pagination) : /2</li>
+        <li>Précision du vocabulaire technique : /2</li>
+        <li>Problématique traitée : /3</li>
+        <li>Clarté et capacité à convaincre : /3</li>
+    </ul>
+    <strong>Notation orale (/10)</strong>
+    <ul>
+        <li>Organisation de la présentation : /2</li>
+        <li>Communication : /3</li>
+        <li>Résultats complets : /3</li>
+        <li>Proposition d’amélioration : /2</li>
+    </ul>
+
+    <div class="text-center mt-5">
+        <a href="{{ path('app_home') }}" class="btn btn-primary">Retour au Portfolio</a>
+    </div>
+</div>
+{% endblock %}

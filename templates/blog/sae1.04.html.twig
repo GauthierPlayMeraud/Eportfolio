@@ -1,1 +1,61 @@
 {% extends "base.html.twig" %}
+
+{% block title %}SAE 1.04 - Se présenter sur Internet{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">🌐 SAE 1.04 : Se présenter sur Internet</h1>
+
+    <div class="alert alert-info">
+        <strong>Durée :</strong> 8 heures<br>
+        <strong>Objectif :</strong> Créer un site Web personnel de présentation (e-portfolio) en respectant un cahier des charges et en soignant son identité numérique professionnelle.
+    </div>
+
+    <h3>📚 Description de la SAÉ</h3>
+    <ul>
+        <li>Réalisation d’un site Web de présentation respectant le cahier des charges fourni pendant la SAÉ 1.04 et intégré dans le e-portfolio.</li>
+        <li>Mise en valeur du parcours, des compétences et des projets, en français et en anglais, à l’aide d’un outil Web (site vitrine / portfolio).</li>
+        <li>Prise en compte de l’e-réputation et des bonnes pratiques de publication de contenus professionnels en ligne.</li>
+    </ul>
+
+    <h3 class="mt-4">🧠 Apprentissages critiques mobilisés</h3>
+    <ul>
+        <li><strong>AC0311 :</strong> Utiliser un système informatique et ses outils (création et gestion du site, usage de Git, hébergement, outil Web de présentation).</li>
+        <li><strong>AC0314 :</strong> Connaître l’architecture et les technologies d’un site Web (HTML, CSS, Bootstrap, projet Symfony).</li>
+    </ul>
+
+    <h3 class="mt-4">📌 Exigences du cahier des charges</h3>
+    <ul>
+        <li>Site Web de présentation personnel comprenant au minimum une page d’accueil et des pages de contenu détaillant le CV, les compétences et les projets.</li>
+        <li>Respect de la structure HTML, utilisation d’outils CSS / Bootstrap et intégration éventuelle dans un projet Symfony selon les consignes du module.</li>
+        <li>Contenus rédigés en français et en anglais, avec une présentation professionnelle et adaptée au contexte R&T.</li>
+        <li>Portfolio en ligne à jour lors de l’évaluation, incluant les traces et pièces justificatives de la démarche.</li>
+    </ul>
+
+    <h3 class="mt-4">🗂️ Critères d’évaluation (RT3)</h3>
+    <strong>AC0311 – Utiliser un système informatique et ses outils (/8)</strong>
+    <ul>
+        <li><strong>Créer son site Web :</strong> Respect du cahier des charges, capacité à innover et à se démarquer via le site (niveaux 1/4 à 4/4 comme décrits dans la grille).</li>
+        <li><strong>Se présenter en utilisant un SI :</strong> Présentation en français et en anglais en s’appuyant sur un outil Web, jusqu’à la capacité à convaincre à l’oral (niveaux 1/4 à 4/4).</li>
+    </ul>
+
+    <strong>AC0314 – Architecture et technologies d’un site Web (/16)</strong>
+    <ul>
+        <li><strong>Langage HTML :</strong> Capacité à coder, structurer des pages et atteindre un niveau de validation W3C.</li>
+        <li><strong>Projet Symfony :</strong> Lancement du projet, création et personnalisation de nouvelles pages.</li>
+        <li><strong>Outils Bootstrap :</strong> Usage partiel ou complet des composants Bootstrap pour personnaliser le site.</li>
+        <li><strong>Outils Git :</strong> Utilisation de Git, compréhension du mécanisme, des intérêts et du fonctionnement, capacité à les expliquer.</li>
+        <li><strong>Innovations, recherches, personnalisation :</strong> Capacité à faire des recherches, à les exploiter pour innover, personnaliser le site et le mettre en valeur lors de la démonstration.</li>
+    </ul>
+
+    <h3 class="mt-4">📝 Modalités d’évaluation</h3>
+    <ul>
+        <li>Évaluation technique du site (respect du cahier des charges, qualité du code, usage des outils, innovation et personnalisation).</li>
+        <li>Évaluation de la démarche portfolio : site et e-portfolio à jour, intégration des preuves et présentation orale accompagnée d’une démonstration.</li>
+    </ul>
+
+    <div class="text-center mt-5">
+        <a href="{{ path('app_home') }}" class="btn btn-primary">Retour au Portfolio</a>
+    </div>
+</div>
+{% endblock %}
