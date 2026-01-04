@@ -1,101 +1,127 @@
 {% extends "base.html.twig" %}
 {% block body %}
 
-    <style>
-    html {
-  scroll-behavior: smooth;
-}
-        .hero {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            margin-top: 80px;
-        }
-        .hero img {
-            max-width: 300px;
-            border-radius: 15px;
-            
-        }
-        .hero .profile-pic {
-          width: 250px;
-          height: 250px;
-          border-radius: 50%;
-          object-fit: cover;
-        }
-        .social-buttons a {
-            margin: 5px;
-        }
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
 
-        /* Espacement entre les sections */
-        .section-spacing {
-          margin-top: 200px;   /* espace au-dessus */
-          margin-bottom: 200px; /* espace en dessous */
-        }
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+    row-gap: 2rem;
+  }
 
-        /* Style du titre des sections */
-        .section-title {
-          font-size: 2rem;
-          font-weight: bold;
-          text-transform: uppercase;
-          letter-spacing: 2px;
-          margin-bottom: 40px;
-          position: relative;
-        }
+  .hero img {
+    max-width: 300px;
+    border-radius: 15px;
+  }
 
-        /* Traits décoratifs autour du titre */
-        .section-title::before,
-        .section-title::after {
-          content: "";
-          display: inline-block;
-          width: 60px;
-          height: 2px;
-          background-color: #007bff; /* couleur bleue Bootstrap */
-          margin: 0 15px;
-          vertical-align: middle;
-        }
+  .hero .profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 
-        /* Effet hover sur les cartes */
-        .card {
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        .card:hover {
-          transform: translateY(-5px);
-          box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-        }
-        
-        .card-img-top {
-          height: 200px;       
-          object-fit: cover;  
-        }
+  .social-buttons a {
+    margin: 5px;
+  }
 
+  /* Espacement entre les sections */
+  .section-spacing {
+    margin-top: 100px;
+    margin-bottom: 100px;
+  }
 
-    </style>
-</head>
+  @media (max-width: 768px) {
+    .section-spacing {
+      margin-top: 60px;
+      margin-bottom: 60px;
+    }
+
+    .hero {
+      margin-top: 40px;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .hero .text-start {
+      text-align: center !important;
+    }
+  }
+
+  /* Style du titre des sections */
+  .section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  /* Traits décoratifs autour du titre */
+  .section-title::before,
+  .section-title::after {
+    content: "";
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    background-color: #007bff;
+    margin: 0 15px;
+    vertical-align: middle;
+  }
+
+  /* Effet hover sur les cartes */
+  .card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  /* Hauteur mini pour harmoniser les cartes loisirs / projets */
+  .card-body-min {
+    min-height: 160px;
+  }
+</style>
 
 <div class="container text-center" id="acceuil">
   <div class="hero">
     <div class="text-start">
       <h1 class="display-4">Bonjour, je suis <strong>Gauthier</strong></h1>
-      <p class="lead">Étudiant en BUT Réseaux & Télécoms, passionné par les réseaux, la cybersécurité et le développement.</p>
+      <p class="lead">
+        Étudiant en BUT Réseaux &amp; Télécoms, passionné par les réseaux, la cybersécurité et le développement.
+      </p>
       <p class="mb-3">
         Actuellement en 1<sup>re</sup> année, je recherche un stage / une alternance pour mettre en pratique mes compétences techniques et humaines.
       </p>
       <div class="social-buttons mt-3">
-        <a href="https://github.com/tonprofil" class="btn btn-outline-dark" target="_blank">
-          <img src="{{ asset('images/github.png') }}" alt="GitHub" style="height:20px; margin-right:5px;">
+        <a href="https://github.com/tonprofil" class="btn btn-outline-dark" target="_blank" aria-label="Profil GitHub">
+          <img src="{{ asset('images/github.png') }}" alt="Logo GitHub" style="height:20px; margin-right:5px;">
           GitHub
         </a>
-        <a href="https://linkedin.com/in/tonprofil" class="btn btn-outline-primary" target="_blank">
-          <img src="{{ asset('images/LNKD.png') }}" alt="LinkedIn" style="height:20px; margin-right:5px;">
+        <a href="https://linkedin.com/in/tonprofil" class="btn btn-outline-primary" target="_blank" aria-label="Profil LinkedIn">
+          <img src="{{ asset('images/LNKD.png') }}" alt="Logo LinkedIn" style="height:20px; margin-right:5px;">
           LinkedIn
         </a>
-        <a href="https://twitter.com/tonprofil" class="btn btn-outline-info" target="_blank">
-          <img src="{{ asset('images/X2.png') }}" alt="X" style="height:20px; margin-right:5px;">
+        <a href="https://twitter.com/tonprofil" class="btn btn-outline-info" target="_blank" aria-label="Profil X">
+          <img src="{{ asset('images/X2.png') }}" alt="Logo X" style="height:20px; margin-right:5px;">
           X
         </a>
-        <a href="{{ asset('cv.pdf') }}" class="btn btn-outline-warning" target="_blank">
-          <img src="{{ asset('images/CV.png') }}" alt="CV" style="height:20px; margin-right:5px;">
+        <a href="{{ asset('cv.pdf') }}" class="btn btn-outline-warning" target="_blank" aria-label="Télécharger mon CV">
+          <img src="{{ asset('images/CV.png') }}" alt="Icône CV" style="height:20px; margin-right:5px;">
           CV
         </a>
         <a href="#contacts" class="btn btn-primary">
@@ -103,11 +129,9 @@
         </a>
       </div>
     </div>
-    <img src="{{ asset('images/photo.jpg') }}" alt="Photo de moi" class="profile-pic">
+    <img src="{{ asset('images/cv-photo.png') }}" alt="Photo de profil de Gauthier" class="profile-pic">
   </div>
 </div>
-
-
 
 <!-- Section À propos -->
 <section class="py-5 section-spacing" id="apropos">
@@ -116,7 +140,7 @@
     <div class="row justify-content-center">
       <div class="col-md-8 text-start">
         <p>
-          Je suis étudiant en BUT Réseaux & Télécommunications, intéressé par l’administration des réseaux,
+          Je suis étudiant en BUT Réseaux &amp; Télécommunications, intéressé par l’administration des réseaux,
           la cybersécurité et la création d’outils pour faciliter le travail des équipes techniques.
         </p>
         <p>
@@ -132,56 +156,216 @@
   </div>
 </section>
 
-
-
-
-
+<!-- Section Compétences -->
 <section class="py-5 section-spacing" id="competences">
   <div class="container text-center">
     <h2 class="section-title">⚙️ Mes compétences</h2>
-    <p class="mb-4">Compétences issues du BUT Réseaux & Télécoms et technologies que j’utilise le plus souvent.</p>
+    <p class="mb-4">
+      Compétences issues du BUT Réseaux &amp; Télécoms et technologies que j’utilise le plus souvent.
+    </p>
 
-    {# Bloc AC (programme officiel) #}
-    <div class="row mb-5">
-      <div class="col-md-4 text-start">
-        <h4 class="mb-3">🔌 Connecter</h4>
-        <ul class="list-group">
-          <li class="list-group-item">AC12.01 Mesurer et analyser les signaux</li>
-          <li class="list-group-item">AC12.02 Caractériser des systèmes de transmissions élémentaires</li>
-          <li class="list-group-item">AC12.03 Déployer des supports de transmission</li>
-          <li class="list-group-item">AC12.04 Connecter les systèmes de ToIP</li>
-          <li class="list-group-item">AC12.05 Communiquer avec un tiers et adapter son discours</li>
-        </ul>
-      </div>
+   <!-- Bloc AC (programme officiel) -->
+<div class="row mb-5">
+  <!-- Connecter -->
+  <div class="col-md-4 text-start">
+    <h4 class="mb-3">🔌 Connecter</h4>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC12.01 Mesurer et analyser les signaux</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC12_01"
+             target="_blank"
+             class="btn btn-outline-primary">
+            Preuve
+          </a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC12_01"
+             target="_blank"
+             class="btn btn-outline-secondary">
+            Analyse réflexive
+          </a>
+        </div>
+      </li>
 
-      <div class="col-md-4 text-start">
-        <h4 class="mb-3">💻 Programmer</h4>
-        <ul class="list-group">
-          <li class="list-group-item">AC13.01 Utiliser un système informatique et ses outils</li>
-          <li class="list-group-item">AC13.02 Lire, exécuter, corriger et modifier un programme</li>
-          <li class="list-group-item">AC13.03 Traduire un algorithme dans un langage donné</li>
-          <li class="list-group-item">AC13.04 Connaître l’architecture et les technologies d’un site Web</li>
-          <li class="list-group-item">AC13.05 Choisir les mécanismes de gestion de données adaptés</li>
-          <li class="list-group-item">AC13.06 Travailler dans un environnement de développement collaboratif</li>
-        </ul>
-      </div>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC12.02 Caractériser des systèmes de transmissions élémentaires</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC12_02"
+             target="_blank"
+             class="btn btn-outline-primary">
+            Preuve
+          </a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC12_02"
+             target="_blank"
+             class="btn btn-outline-secondary">
+            Analyse réflexive
+          </a>
+        </div>
+      </li>
 
-      <div class="col-md-4 text-start">
-        <h4 class="mb-3">🛠 Administrer</h4>
-        <ul class="list-group">
-          <li class="list-group-item">AC11.01 Lois fondamentales de l’électricité</li>
-          <li class="list-group-item">AC11.02 Architecture des systèmes numériques et de l’Internet</li>
-          <li class="list-group-item">AC11.03 Configuration d’un réseau local</li>
-          <li class="list-group-item">AC11.04 Rôles des systèmes d’exploitation</li>
-          <li class="list-group-item">AC11.05 Diagnostic des dysfonctionnements réseau</li>
-          <li class="list-group-item">AC11.06 Installation et documentation d’un poste client</li>
-        </ul>
-      </div>
-    </div>
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC12.03 Déployer des supports de transmission</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC12_03"
+             target="_blank"
+             class="btn btn-outline-primary">
+            Preuve
+          </a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC12_03"
+             target="_blank"
+             class="btn btn-outline-secondary">
+            Analyse réflexive
+          </a>
+        </div>
+      </li>
 
-    {# Bloc compétences techniques (badges) #}
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC12.04 Connecter les systèmes de ToIP</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC12_04"
+             target="_blank"
+             class="btn btn-outline-primary">
+            Preuve
+          </a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC12_04"
+             target="_blank"
+             class="btn btn-outline-secondary">
+            Analyse réflexive
+          </a>
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC12.05 Communiquer avec un tiers et adapter son discours</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC12_05"
+             target="_blank"
+             class="btn btn-outline-primary">
+            Preuve
+          </a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC12_05"
+             target="_blank"
+             class="btn btn-outline-secondary">
+            Analyse réflexive
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Programmer -->
+  <div class="col-md-4 text-start">
+    <h4 class="mb-3">💻 Programmer</h4>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC13.01 Utiliser un système informatique et ses outils</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC13_01" target="_blank" class="btn btn-outline-primary">Preuve</a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC13_01" target="_blank" class="btn btn-outline-secondary">Analyse réflexive</a>
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC13.02 Lire, exécuter, corriger et modifier un programme</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC13_02" target="_blank" class="btn btn-outline-primary">Preuve</a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC13_02" target="_blank" class="btn btn-outline-secondary">Analyse réflexive</a>
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC13.03 Traduire un algorithme dans un langage donné</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC13_03" target="_blank" class="btn btn-outline-primary">Preuve</a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC13_03" target="_blank" class="btn btn-outline-secondary">Analyse réflexive</a>
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC13.04 Connaître l’architecture et les technologies d’un site Web</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC13_04" target="_blank" class="btn btn-outline-primary">Preuve</a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC13_04" target="_blank" class="btn btn-outline-secondary">Analyse réflexive</a>
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC13.05 Choisir les mécanismes de gestion de données adaptés</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC13_05" target="_blank" class="btn btn-outline-primary">Preuve</a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC13_05" target="_blank" class="btn btn-outline-secondary">Analyse réflexive</a>
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC13.06 Travailler dans un environnement de développement collaboratif</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC13_06" target="_blank" class="btn btn-outline-primary">Preuve</a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC13_06" target="_blank" class="btn btn-outline-secondary">Analyse réflexive</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Administrer -->
+  <div class="col-md-4 text-start">
+    <h4 class="mb-3">🛠 Administrer</h4>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC11.01 Lois fondamentales de l’électricité</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC11_01" target="_blank" class="btn btn-outline-primary">Preuve</a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC11_01" target="_blank" class="btn btn-outline-secondary">Analyse réflexive</a>
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC11.02 Architecture des systèmes numériques et de l’Internet</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC11_02" target="_blank" class="btn btn-outline-primary">Preuve</a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC11_02" target="_blank" class="btn btn-outline-secondary">Analyse réflexive</a>
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC11.03 Configuration d’un réseau local</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://docs.google.com/document/d/16NoduA2GVES91RqPsuvvB868T71cPSfxgG4YcjvVx9Y/edit?usp=drive_link" target="_blank" class="btn btn-outline-primary">Preuve</a>
+          <a href="https://docs.google.com/document/d/1WEXR_mAQT8pZSGank4BDnNEvglO6tehNMEE74gkFY8w/edit?usp=drive_link" target="_blank" class="btn btn-outline-secondary">Analyse réflexive</a>
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC11.04 Rôles des systèmes d’exploitation</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC11_04" target="_blank" class="btn btn-outline-primary">Preuve</a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC11_04" target="_blank" class="btn btn-outline-secondary">Analyse réflexive</a>
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC11.05 Diagnostic des dysfonctionnements réseau</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://drive.google.com/TON_LIEN_PREUVE_AC11_05" target="_blank" class="btn btn-outline-primary">Preuve</a>
+          <a href="https://drive.google.com/TON_LIEN_ANALYSE_AC11_05" target="_blank" class="btn btn-outline-secondary">Analyse réflexive</a>
+        </div>
+      </li>
+
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>AC11.06 Installation et documentation d’un poste client</span>
+        <div class="btn-group btn-group-sm" role="group">
+          <a href="https://docs.google.com/document/d/1EpR9-y0W5LzSEfeC4HgME-oklA--bElr/edit?usp=drive_link&ouid=104932122257706886425&rtpof=true&sd=true" target="_blank" class="btn btn-outline-primary">Preuve</a>
+          <a href="https://docs.google.com/document/d/1T0AFmloBMjPigKerGOyHhE0QK446I7TW/edit?usp=drive_link&ouid=104932122257706886425&rtpof=true&sd=true" target="_blank" class="btn btn-outline-secondary">Analyse réflexive</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- Bloc compétences techniques (badges) -->
     <h3 class="mb-3">🧪 Compétences techniques</h3>
-    <p class="mb-4">Technologies et outils manipulés dans les SAÉ (réseaux, développement et traitement de données).</p>
+    <p class="mb-4">
+      Technologies et outils manipulés dans les SAÉ (réseaux, développement et traitement de données).
+    </p>
 
     <div class="mb-3">
       <span class="badge text-bg-primary rounded-pill m-1">Linux</span>
@@ -197,19 +381,16 @@
       <span class="badge text-bg-success rounded-pill m-1">Bootstrap</span>
       <span class="badge text-bg-success rounded-pill m-1">Symfony</span>
     </div>
-    <div class="mb-3">
+    <div class="mb-4">
       <span class="badge text-bg-info rounded-pill m-1">Git / GitHub</span>
       <span class="badge text-bg-info rounded-pill m-1">Virtualisation</span>
       <span class="badge text-bg-info rounded-pill m-1">Markdown</span>
       <span class="badge text-bg-info rounded-pill m-1">Excel / traitement de données</span>
     </div>
-  </div>
-</section>
 
-
-    <!-- Soft Skills en boutons -->
-    <div class="mt-5 text-center">
-      <h3 class="mb-4">🌟 Mes Soft Skills</h3>
+    <!-- Soft Skills intégrés juste en dessous -->
+    <div class="text-center">
+      <h3 class="mb-3">🌟 Mes Soft Skills</h3>
       <div class="d-flex flex-wrap gap-2 justify-content-center">
         <span class="btn btn-outline-primary btn-sm">💡 Esprit critique</span>
         <span class="btn btn-outline-success btn-sm">🎨 Créativité</span>
@@ -218,12 +399,11 @@
         <span class="btn btn-outline-danger btn-sm">🗣 Communication</span>
       </div>
     </div>
+
   </div>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap"></script>
-
-
 
 
 <!-- Section Loisirs -->
@@ -234,55 +414,62 @@
       <!-- Sport -->
       <div class="col-md-3">
         <div class="card border-primary shadow-sm">
-          <a href="https://www.youtube.com/watch?v=-xUJmgXYHzc" target="_blank">
-          <img src="{{ asset('images/jeffseid.jpg') }}" class="card-img-top" alt="Sport">
-            </a>
-          <div class="card-body">
+          <a href="https://www.youtube.com/watch?v=-xUJmgXYHzc" target="_blank" aria-label="Vidéo musculation">
+            <img src="{{ asset('images/jeffseid.jpg') }}" class="card-img-top" alt="Musculation en salle">
+          </a>
+          <div class="card-body card-body-min">
             <h5 class="card-title">🏋🏻 Sport</h5>
-            <p class="card-text">Je pratique la musculation en salle, pour garder une bonne hygiéne de vie et un beau physique.</p>
+            <p class="card-text">
+              Je pratique la musculation en salle pour garder une bonne hygiène de vie et un beau physique.
+            </p>
           </div>
         </div>
       </div>
       <!-- Musique -->
       <div class="col-md-3">
         <div class="card border-success shadow-sm">
-           <a href="https://www.youtube.com/watch?v=FGBhQbmPwH8&list=RDFGBhQbmPwH8&start_radio=1" target="_blank">
-          <img src="{{ asset('images/dj.jpg') }}" class="card-img-top" alt="Musique">
-           </a>
-          <div class="card-body">
+          <a href="https://www.youtube.com/watch?v=FGBhQbmPwH8&list=RDFGBhQbmPwH8&start_radio=1" target="_blank" aria-label="Playlist musique">
+            <img src="{{ asset('images/dj.jpg') }}" class="card-img-top" alt="DJ et musique">
+          </a>
+          <div class="card-body card-body-min">
             <h5 class="card-title">🎵 Musique</h5>
-            <p class="card-text">J'écoute beaucoup de musique et mix sur un controlleur DJ</p>
+            <p class="card-text">
+              J’écoute beaucoup de musique et je mixe sur un contrôleur DJ.
+            </p>
           </div>
         </div>
       </div>
-      <!-- Voyage -->
+      <!-- Échecs -->
       <div class="col-md-3">
         <div class="card border-info shadow-sm">
-           <a href="https://www.chess.com" target="_blank">
-          <img src="{{ asset('images/echec.jpg') }}" class="card-img-top" alt="Voyage">
-           </a>
-          <div class="card-body">
-            <h5 class="card-title">♟️Échec</h5>
-            <p class="card-text">J'adore jouer au échec et en apprendre le plus possible.</p>
+          <a href="https://www.chess.com" target="_blank" aria-label="Site Chess.com">
+            <img src="{{ asset('images/echec.jpg') }}" class="card-img-top" alt="Plateau d’échecs">
+          </a>
+          <div class="card-body card-body-min">
+            <h5 class="card-title">♟️ Échecs</h5>
+            <p class="card-text">
+              J’adore jouer aux échecs et en apprendre le plus possible.
+            </p>
           </div>
         </div>
       </div>
       <!-- Lecture -->
       <div class="col-md-3">
         <div class="card border-warning shadow-sm">
-        <a href="https://www.youtube.com/watch?v=UvOPy_iay0w" target="_blank">
-        <img src="{{ asset('images/socrate.jpg') }}" class="card-img-top" alt="Lecture">
+          <a href="https://www.youtube.com/watch?v=UvOPy_iay0w" target="_blank" aria-label="Vidéo philosophie">
+            <img src="{{ asset('images/socrate.jpg') }}" class="card-img-top" alt="Portrait de Socrate">
           </a>
-          <div class="card-body">
+          <div class="card-body card-body-min">
             <h5 class="card-title">📚 Lecture</h5>
-            <p class="card-text">Je lis différent genre de livre allant du roman aux livres philosophique.</p>
+            <p class="card-text">
+              Je lis différents genres de livres, allant du roman aux ouvrages philosophiques.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- Section Projets -->
 <section class="section-spacing" id="projets">
@@ -293,40 +480,60 @@
     <div class="row justify-content-center">
       <div class="col-md-3 mb-4">
         <div class="card border-primary shadow-sm">
-          <div class="card-body">
+          <div class="card-body card-body-min">
             <h5 class="card-title">📘 SAE 1.01</h5>
-            <p class="card-text">Hygiène informatique, bonnes pratiques de sécurité et sensibilisation aux risques.</p>
-            <a href="{{ path('app_sae101') }}" class="btn btn-primary" target="_blank">Voir le projet</a>
+            <p class="card-text">
+              Hygiène informatique, bonnes pratiques de sécurité et sensibilisation aux risques.
+            </p>
+            <a href="{{ path('app_sae101') }}" class="btn btn-primary" target="_blank"
+               aria-label="Voir le projet SAE 1.01">
+              Voir le projet
+            </a>
           </div>
         </div>
       </div>
 
       <div class="col-md-3 mb-4">
         <div class="card border-success shadow-sm">
-          <div class="card-body">
+          <div class="card-body card-body-min">
             <h5 class="card-title">🧩 SAE 1.02</h5>
-            <p class="card-text">Configuration de réseaux locaux, services de base et dépannage.</p>
-            <a href="{{ path('app_sae102') }}" class="btn btn-success" target="_blank">Voir le projet</a>
+            <p class="card-text">
+              Configuration de réseaux locaux, services de base et dépannage.
+            </p>
+            <a href="{{ path('app_sae102') }}" class="btn btn-success" target="_blank"
+               aria-label="Voir le projet SAE 1.02">
+              Voir le projet
+            </a>
           </div>
         </div>
       </div>
 
       <div class="col-md-3 mb-4">
         <div class="card border-info shadow-sm">
-          <div class="card-body">
+          <div class="card-body card-body-min">
             <h5 class="card-title">🔧 SAE 1.03</h5>
-            <p class="card-text">Étude de la couverture WiFi, câblage et communication avec le client.</p>
-            <a href="{{ path('app_sae103') }}" class="btn btn-info" target="_blank">Voir le projet</a>
+            <p class="card-text">
+              Étude de la couverture WiFi, câblage et communication avec le client.
+            </p>
+            <a href="{{ path('app_sae103') }}" class="btn btn-info" target="_blank"
+               aria-label="Voir le projet SAE 1.03">
+              Voir le projet
+            </a>
           </div>
         </div>
       </div>
 
       <div class="col-md-3 mb-4">
         <div class="card border-dark shadow-sm">
-          <div class="card-body">
+          <div class="card-body card-body-min">
             <h5 class="card-title">🎓 SAE 1.04</h5>
-            <p class="card-text">Création de ce portfolio : site Web de présentation en Symfony / Bootstrap.</p>
-            <a href="{{ path('app_sae104') }}" class="btn btn-dark" target="_blank">Voir le projet</a>
+            <p class="card-text">
+              Création de ce portfolio : site Web de présentation en Symfony / Bootstrap.
+            </p>
+            <a href="{{ path('app_sae104') }}" class="btn btn-dark" target="_blank"
+               aria-label="Voir le projet SAE 1.04">
+              Voir le projet
+            </a>
           </div>
         </div>
       </div>
@@ -336,10 +543,15 @@
     <div class="row justify-content-center">
       <div class="col-md-3">
         <div class="card border-info shadow-sm">
-          <div class="card-body">
+          <div class="card-body card-body-min">
             <h5 class="card-title">📈 SAE 1.05</h5>
-            <p class="card-text">Traitement de données réseau (tcpdump) avec Python, CSV et Excel.</p>
-            <a href="{{ path('app_sae105') }}" class="btn btn-info" target="_blank">Voir le projet</a>
+            <p class="card-text">
+              Traitement de données réseau (tcpdump) avec Python, CSV et Excel.
+            </p>
+            <a href="{{ path('app_sae105') }}" class="btn btn-info" target="_blank"
+               aria-label="Voir le projet SAE 1.05">
+              Voir le projet
+            </a>
           </div>
         </div>
       </div>
@@ -347,8 +559,6 @@
 
   </div>
 </section>
-
-
 
 <!-- Section Contact -->
 <section class="py-5 section-spacing" id="contacts">
@@ -376,4 +586,5 @@
     </div>
   </div>
 </section>
+
 {% endblock %}
